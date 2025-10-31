@@ -3,17 +3,10 @@ import React from "react";
 import LoginScreen from "../../screens/Login";
 import SignupScreen from "../../screens/Signup";
 
-type AuthStackParamList = {
-  Login: undefined;
-  Signup: undefined;
-};
-
-const Stack = createNativeStackNavigator<AuthStackParamList>();
-
+const Stack = createNativeStackNavigator();
 interface AuthStackProps {
   setUserRole: (role: "admin" | "user" | null) => void;
 }
-
 export default function AuthStack({ setUserRole }: AuthStackProps) {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

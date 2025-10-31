@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "screens/AdminDashboard.jsx", "app/_layout.js", "app/navigation/AuthStack.js"  ]
 }

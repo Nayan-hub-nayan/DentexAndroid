@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import {
-    ActivityIndicator,
-    Alert,
-    KeyboardAvoidingView,
-    Platform,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  ActivityIndicator,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 // import axios from 'axios';
 // import { saveToken, saveUser } from '../utils/storage';
 
 const API_URL = 'http://localhost:5000/api/auth'; // Change to your IP for physical device
 
-const LoginScreen = ({ navigation, setIsAuthenticated, setUserRole }) => {
+const LoginScreen = ({ setUserRole }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -103,7 +103,7 @@ const LoginScreen = ({ navigation, setIsAuthenticated, setUserRole }) => {
           onPress={() => navigation.navigate('Signup')}
         >
           <Text style={styles.linkText}>
-            Don't have an account? <Text style={styles.linkTextBold}>Sign Up</Text>
+            Don&apos;t have an account? <Text style={styles.linkTextBold}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
