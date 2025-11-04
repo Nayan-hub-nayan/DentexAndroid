@@ -10,12 +10,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 // import axios from 'axios';
 // import { saveToken, saveUser } from '../utils/storage';
 
 const API_URL = 'http://localhost:5000/api/auth'; // Change to your IP for physical device
 
 const LoginScreen = ({ setUserRole }) => {
+    const navigation = useNavigation();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
